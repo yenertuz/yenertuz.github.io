@@ -2,3 +2,9 @@
 border-style:solid;
 height:100px;
 }
+
+.single_tab{
+  position:relative;
+  border-style:solid;
+  width:33%;
+}

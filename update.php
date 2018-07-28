@@ -18,11 +18,11 @@ if ($argv[1] == "needwork")
 }
 else if ($argv[1] == "set")
 {
-	set_project($json, $argv[2], $argv[3]);
+	$json = set_project($json, $argv[2], $argv[3]);
 }
 else if ($argv[1] == "log")
 {
-	log_project($json, $argv[2], $argv[3]);
+	$json = log_project($json, $argv[2], $argv[3]);
 }
 else if ($argv[1] == "delete")
 {

@@ -9,7 +9,9 @@ $tmp = date('d.m.Y, H:i:s');
 
 $json["last_update"] = $tmp;
 
-print_r($json);
+//print_r($json);
+
+file_put_contents("json", json_encode($json));
 
 system("git add .");
 system("git commit -m \"m\"");

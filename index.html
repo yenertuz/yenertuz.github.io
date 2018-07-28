@@ -5,7 +5,8 @@
   <div id="zz">What's Yener Up To?</div><br>
   <div id="tt">123</div>
   <script>
-    document.getElementById("tt").innerHTML = Date.getHours();
+    var timeNow = new Date();
+    document.getElementById("tt").innerHTML = timeNow.getHours() + ":" + timeNow.getMinutes();
   </script>
 </body>
 </html>

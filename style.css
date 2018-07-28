@@ -1,12 +1,1 @@
-#tab_bar {
-border-style:solid;
-height:100px;
-}
 
-.single_tab{
-  border-style:solid;
-  width:32%;
-  height:100%;
-  display:inline-block;
-  position:relative;
-}

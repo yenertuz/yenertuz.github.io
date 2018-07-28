@@ -2,7 +2,7 @@
 
 function	get_timestamp()
 {
-	date_default_timezone_get("America/Los_Angeles");
+	date_default_timezone_set('America/Los_Angeles');
 	return (date('d.m.Y, H:i:s'));
 }
 

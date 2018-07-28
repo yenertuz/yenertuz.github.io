@@ -33,12 +33,15 @@ function	log_project($json, $project_name, $description)
 
 function datediffInWeeks($date1, $date2)
 {
-    if($date1 > $date2)
+    $date1 = explode(",", $date1)[0];
+	$date2 = explode(",", $date2)[0];
+	if($date1 > $date2)
 	{
 		return (datediffInWeeks($date2, $date1));
 	}
-    $first = DateTime::createFromFormat('m/d/Y', $date1);
-    $second = DateTime::createFromFormat('m/d/Y', $date2);
+    $first = DateTime::createFromFormat('m.d.Y', $date1);
+    $second = DateTime::createFromFormat('m.d.Y', $date2);
+	echo $first+" 000 "+$second.PHP_EOL;
     return (floor($first->diff($second)->days/7));
 }
 

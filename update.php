@@ -2,7 +2,7 @@
 
 system("git pull -f");
 
-$json = json_decode(file_get_contents("status"));
+$json = json_decode(file_get_contents("json"));
 
 print_r($json);
 

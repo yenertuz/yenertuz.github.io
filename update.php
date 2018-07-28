@@ -4,7 +4,10 @@ system("git pull -f");
 
 $json = json_decode(file_get_contents("json"));
 
-$json["last_update"] = date("m/d/y H:i:s");
+date_default_timezone_set("America/Los_Angeles");
+$tmp = date('d.m.Y, H:i:s');
+
+$json["last_update"] = $tmp;
 
 print_r($json);
 

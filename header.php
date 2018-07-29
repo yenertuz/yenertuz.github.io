@@ -2,7 +2,15 @@
 
 function	write_to_index_html($json)
 {
-	file_put_contents("index.html", json_encode($json));
+	$to_write = "";
+	$to_write .= file_get_contents("start");
+	if (get_day_difference($json["need_work"], get_timestamp()) == 0)
+	{
+		$to_write .= "<div id=\"need_work\">NEED WORK!</div><br>\n";
+	}
+	$to_write .= "<div id=\"last_updated\">LAST UPDATED: ".$json["timestamp"]."</div><br>\n";
+	$to_write .= file_get_contents("end");
+	file_put_contents("index.html", $to_write);
 }
 
 function	get_day_difference($date1, $date2)

@@ -14,9 +14,9 @@ function	write_to_index_html($json)
 	foreach ($json["projects"] as $key=>$value)
 	{
 		$to_write .= "<tr>";
-		$to_write .= "<th>".$value["status"]."</th>";
-		$to_write .= "<th>".$key."</th>";
-		$to_write .= "<th>".$value["timestamp"]."</th>";
+		$to_write .= "<td>".$value["status"]."</td>";
+		$to_write .= "<td>".$key."</td>";
+		$to_write .= "<td>".format_timestamp($value["timestamp"])."</td>";
 		$to_write .= "</tr>\n";
 	}
 	$to_write .= "</table>\n";
@@ -38,7 +38,7 @@ function	get_day_difference($date1, $date2)
 function	get_timestamp()
 {
 	date_default_timezone_set('America/Los_Angeles');
-	return (date('d.m.Y, H:i:s'));
+	return (date('m.d.Y, H:i:s'));
 }
 
 function	set_project($json, $project_name, $project_status)

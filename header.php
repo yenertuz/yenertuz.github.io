@@ -1,5 +1,21 @@
 <?php
 
+function	write_to_index_html($json)
+{
+	file_put_contents("index.html");
+}
+
+function	get_day_difference($date1, $date2)
+{
+	if ($date1 > $date2)
+	{
+		return (get_day_difference($date2, $date1));
+	}
+	$first = DateTime::createFromFormat('m.d.Y, H:i:s', $date1);
+	$second = DateTime::createFromFormat('m.d.Y, H:i:s', $date2);
+	return (floor($first->diff($second)->days));
+}
+
 function	get_timestamp()
 {
 	date_default_timezone_set('America/Los_Angeles');
@@ -39,7 +55,6 @@ function datediffInWeeks($date1, $date2)
 	}
     $first = DateTime::createFromFormat('m.d.Y, H:i:s', $date1);
     $second = DateTime::createFromFormat('m.d.Y, H:i:s', $date2);
-	echo $first+" 000 "+$second.PHP_EOL;
     return (floor($first->diff($second)->days/7));
 }
 

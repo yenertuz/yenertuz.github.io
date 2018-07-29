@@ -36,6 +36,7 @@ else if ($argv[1] != "update")
 $json = erase_old_projects($json);
 
 file_put_contents("json", json_encode($json));
+write_to_index_html($json);
 
 system("git add .");
 system("git commit -m \"m\"");

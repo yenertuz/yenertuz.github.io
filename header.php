@@ -16,7 +16,7 @@ function	write_to_index_html($json)
 		$to_write .= "<tr>";
 		$to_write .= "<td>".$value["status"]."</td>";
 		$to_write .= "<td>".$key."</td>";
-		$to_write .= "<td>".format_timestamp($value["timestamp"])."</td>";
+		$to_write .= "<td>".$value["timestamp"]."</td>";
 		$to_write .= "</tr>\n";
 	}
 	$to_write .= "</table>\n";

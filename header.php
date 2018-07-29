@@ -14,9 +14,9 @@ function	write_to_index_html($json)
 	foreach ($json["projects"] as $key=>$value)
 	{
 		$to_write .= "<tr>";
-		$to_write .= "<th>".$json[$key]["status"]."</th>";
+		$to_write .= "<th>".$value["status"]."</th>";
 		$to_write .= "<th>".$key."</th>";
-		$to_write .= "<th>".$json[$key]["timestamp"]."</th>";
+		$to_write .= "<th>".$value["timestamp"]."</th>";
 		$to_write .= "</tr>\n";
 	}
 	$to_write .= "</table>\n";

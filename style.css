@@ -1,8 +1,4 @@
-#zz {
-font-family:monospace;
-text-decoration:underline;
-}
-
-#columns {
-  text-decoration:normal;
+th {
+width:33%;
+border-style:solid;
 }

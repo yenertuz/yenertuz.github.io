@@ -1,4 +1,5 @@
 <html>
+<link rel="stylesheet" type="text/css" href="style.css">
 <title>Status From Yener</title>
 <body>
 <div id="h1">What's Yener Up To?</div><br>

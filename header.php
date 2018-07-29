@@ -9,6 +9,8 @@ function	write_to_index_html($json)
 		$to_write .= "<div id=\"need_work\">NEED WORK!</div><br>\n";
 	}
 	$to_write .= "<div id=\"last_updated\">LAST UPDATED: ".$json["timestamp"]."</div><br>\n";
+	$to_write .= "<table>\n";
+	$to_write .= "<tr id='columns'><th>STATUS</th><th>NAME</th><th>LAST UPDATE</th></tr>\n";
 	$to_write .= file_get_contents("end");
 	file_put_contents("index.html", $to_write);
 }

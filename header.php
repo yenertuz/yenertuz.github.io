@@ -83,6 +83,7 @@ function	erase_old_projects($json)
 	{
 		if (datediffInWeeks($json["projects"][$key]["timestamp"], get_timestamp()) != 0)
 		{
+			echo "ERASING ".$key." NOW\n";
 			unset($json["projects"][$key]);
 		}
 	}

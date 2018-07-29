@@ -4,6 +4,10 @@ border-style:solid;
 }
 
 td {
- width:33%;
-  border-style:solid;
+width:33%;
+border-style:solid;
+}
+
+tr {
+border-style:solid;
 }

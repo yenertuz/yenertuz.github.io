@@ -10,7 +10,7 @@ function	write_to_index_html($json)
 	}
 	$to_write .= "<div id=\"last_updated\">LAST UPDATED: ".$json["timestamp"]."</div><br>\n";
 	$to_write .= "<table>\n";
-	$to_write .= "<tr id='columns'><th>STATUS</th><th>NAME</th><th>LAST UPDATE</th></tr>\n";
+	$to_write .= "<tr id=\"columns\"><th>STATUS</th><th>NAME</th><th>LAST UPDATE</th></tr>\n";
 	foreach ($json["projects"] as $key=>$value)
 	{
 		$to_write .= "<tr>";

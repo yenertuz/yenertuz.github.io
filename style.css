@@ -1,13 +1,15 @@
 th {
-width:33%;
 border-style:solid;
 }
 
 td {
-width:33%;
 border-style:solid;
 }
 
 tr {
 border-style:solid;
+}
+
+table {
+  width:100%
 }

@@ -2,7 +2,7 @@
 
 function	write_to_index_html($json)
 {
-	file_put_contents($json, "index.html");
+	file_put_contents("index.html", $json);
 }
 
 function	get_day_difference($date1, $date2)

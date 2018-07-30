@@ -2,7 +2,7 @@
 
 include("header.php");
 
-system("git pull -f");
+system("git pull -f -q");
 
 $json = json_decode(file_get_contents("json"), true);
 
@@ -43,8 +43,8 @@ file_put_contents("json", json_encode($json));
 write_to_index_html($json);
 
 system("git add .");
-system("git commit -m \"m\"");
-system("git push");
+system("git commit -m \"m\" -q");
+system("git push -q");
 
 echo($json["return"].PHP_EOL);
 

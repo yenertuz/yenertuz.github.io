@@ -44,9 +44,14 @@ function	get_timestamp()
 function	set_project($json, $project_name, $project_status)
 {
 	if ($project_status != "assigned" && $project_status != "working"
-			&& $project_status != "review" && $project_status != "finished")
+			&& $project_status != "review" && $project_status != "finished" && $project_status != "delete")
 	{
 		$json["return"] = "ERROR: ".$project_status." IS AN INVALID PROJECT STATUS";
+		return ($json);
+	}
+	if ($projet_status == "delete" && isset($json["projects"][$project_name]))
+	{
+		unset($json["projects"][$project_name]);
 		return ($json);
 	}
 	$json["projects"][$project_name]["status"] = $project_status;

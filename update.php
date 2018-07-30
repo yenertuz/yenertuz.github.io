@@ -28,6 +28,10 @@ else if ($argv[1] == "delete")
 {
 	unset($json["projects"][$argv[2]]);
 }
+else if ($argv[1] == "nowork")
+{
+	$json["need_work"] = "";
+}
 else if ($argv[1] != "update")
 {
 	$json["return"] = "ERROR: ".$argv[1]." IS NOT A VALID COMMAND";

@@ -2,7 +2,7 @@
 
 include("header.php");
 
-system("git pull -f >-");
+system("git pull -f 2>-");
 
 $json = json_decode(file_get_contents("json"), true);
 
@@ -42,9 +42,9 @@ $json = erase_old_projects($json);
 file_put_contents("json", json_encode($json));
 write_to_index_html($json);
 
-system("git add .  >-");
-system("git commit -m \"m\" >-");
-system("git push >-");
+system("git add .  2>-");
+system("git commit -m \"m\" 2>-");
+system("git push 2>-");
 
 echo($json["return"].PHP_EOL);
 

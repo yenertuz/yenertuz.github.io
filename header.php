@@ -6,7 +6,7 @@ function	write_to_index_html($json)
 	$to_write .= file_get_contents("start");
 	if ($json["need_work"] != "" && get_day_difference($json["need_work"], get_timestamp()) == 0)
 	{
-		$to_write .= "<div id=\"need_work\">NEED WORK!</div><br>\n";
+		$to_write .= "<div id=\"need_work\"><b>NEED WORK!</b></div><br>\n";
 	}
 	$to_write .= "<div id=\"last_updated\">LAST UPDATED: ".$json["timestamp"]."</div><br>\n";
 	$to_write .= "<table width=\"100%\">\n";

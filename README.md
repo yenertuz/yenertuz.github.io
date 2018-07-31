@@ -1,6 +1,6 @@
 ## WHAT'S YENER UP TO?
 
-**Problem:** Supervisors at work checking in with me to see where I'm at with my work. This way they'll be able to read updates.
+**Problem:** Supervisors at work need to individually ask me daily if I have enough assignments, which takes significant time. 
 
 **Another problem:** Can't afford hosting for a dynamic website
 

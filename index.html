@@ -7,22 +7,12 @@
 	<link rel="icon" href="https://img.icons8.com/dusk/64/000000/app-symbol.png" type="image/gif" sizes="16x16">
 	<title>Widgets</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	<script src="env.js"></script>
-    <!-- <script src="bundle.js"></script> -->
+	<script src="environment.js"></script>
+    <script src="bundle.js"></script>
   </head>
   <body>
 	  <div id='root'></div>
 	  <br><br><hr>
 	  <footer style="text-align: center">Copyright &copy; Yener Tuz www.yenertuz.com 2019</footer>
   </body>
-  <script>
-	  var root = $("#root");
-	  var projects = environment.projects;
-	  projects.forEach( (element) => {
-		  var element_string = JSON.stringify(element);
-		  var new_p = `<p>${element_string}</p>`;
-		  root.html(root.html() + new_p);
-	  })
-  </script>
 </html>

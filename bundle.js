@@ -192,7 +192,7 @@ var environment = {
     "source": "www.facebook.com",
     "symbol_source": "www.foo.com"
   }],
-  search_symbol_source: "www.search_symbol_source.com/something.gif",
+  search_symbol_source: "https://freeiconshop.com/wp-content/uploads/edd/search-solid.png",
   back_symbol_source: "some_source_here",
   link_symbol_source: "some_source_here",
   selected: "",
@@ -299,8 +299,15 @@ function (_React$Component) {
           width: _environment__WEBPACK_IMPORTED_MODULE_3__["default"].navbar_image_width
         })));
       });
-      var search_bar = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null);
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, contents);
+      var search_bar = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        id: "search-bar-input",
+        type: "text"
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        src: _environment__WEBPACK_IMPORTED_MODULE_3__["default"].search_symbol_source,
+        width: "30px",
+        height: "30px"
+      }));
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, contents, search_bar);
     }
   }]);
 

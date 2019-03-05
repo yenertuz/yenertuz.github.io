@@ -31,7 +31,7 @@ const environment = {
 			"symbol_source": "www.foo.com"
 		}
 	],
-	search_symbol_source: "www.search_symbol_source.com/something.gif",
+	search_symbol_source: "https://freeiconshop.com/wp-content/uploads/edd/search-solid.png",
 	back_symbol_source: "some_source_here",
 	link_symbol_source: "some_source_here",
 	selected: "",

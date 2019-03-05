@@ -24,12 +24,14 @@ class List extends React.Component {
 			}
 		)
 
-		var search_bar = <div></div>
+		var search_bar = <div>
+			<input id="search-bar-input" type="text"></input>
+			<img src={environment.search_symbol_source} width="30px" height="30px"></img>
+		</div>;
 
 		return (<div>
 			{contents}
-			{/* {search_bar()}
-			{projects()} */}
+			{search_bar}
 		</div>);
 	}
 }

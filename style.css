@@ -2,4 +2,67 @@ body * {
 	margin-top: 20px;
 	margin-bottom: 20px;
 	display:block;
+	font-family: sans-serif;
 }
+
+#root {
+	display: grid;
+	grid-template-areas:
+	'header'
+	'search'
+	'main';
+	grid-gap: 5px;
+}
+
+.header-container { grid-area: 'header'; }
+.search-container { grid-area: 'search'  }
+.list-container   { grid-area: 'main'    }
+
+.header-container *, .search-container * {
+	display: inline;
+}
+
+.header-container{
+	display: flex;
+	justify-content: space-around;
+	border-bottom: 1px solid black;
+}
+
+.search-container {
+	display: flex;
+	justify-content: center;
+	border-bottom: 1px solid black;
+	vertical-align: middle;
+}
+
+.search-container input {
+	border: 1px solid black;
+	width: 50%;
+	margin-right: 20px;
+	font-size: 13px;
+	padding-left: 10px;
+}
+
+.search-container input:focus {
+	outline: 1px solid black;
+}
+
+.list-container {
+	display: flex; 
+	flex-direction: column;
+}
+
+.list-item {
+	display: flex;
+	justify-content: space-around;
+	vertical-align: middle;
+}
+
+.list-item b, .list-item i {
+	margin-top: auto;
+	margin-bottom: auto;
+	text-align:center;
+}
+
+.list-item b { width: 100px;  }
+.list-item i { width: 100px; word-wrap: break-word;  }

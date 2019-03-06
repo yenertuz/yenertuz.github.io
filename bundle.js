@@ -182,19 +182,22 @@ var environment = {
     "destination": "mailto:yenertuz@hotmail.com"
   }],
   projects: [{
-    "title": "Projecto",
-    "description": "React, Laravel",
+    "title": "Calculator",
+    "description": "React, JavaScript, HTML, CSS",
     "image_source": "www.google.com",
-    "symbol_source": "www.zest.com"
+    "symbol_source": "hhttps://www.shareicon.net/download/2015/12/12/686141_tools.svg",
+    "destination": "https://www.yenertuz.com/react_calculator"
   }, {
     "title": "Zohosites",
     "description": "React, JavaScript",
-    "source": "www.facebook.com",
-    "symbol_source": "www.foo.com"
+    "image_source": "www.facebook.com",
+    "symbol_source": "fas fa-tools",
+    "destination": "https://www.yenertuz.com/react_widgets"
   }],
   search_symbol_source: "https://freeiconshop.com/wp-content/uploads/edd/search-solid.png",
   back_symbol_source: "some_source_here",
   link_symbol_source: "some_source_here",
+  new_tab_symbol_source: "http://cdn.onlinewebfonts.com/svg/img_520968.png",
   selected: "",
   search: "",
   navbar_image_width: "50px",
@@ -286,9 +289,10 @@ function (_React$Component) {
         if (string == "Email") return "_self";else return "_blank";
       };
 
-      var contents = _environment__WEBPACK_IMPORTED_MODULE_3__["default"].header.map(function (element, index) {
+      var header = _environment__WEBPACK_IMPORTED_MODULE_3__["default"].header.map(function (element, index) {
         return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-          key: index
+          key: index,
+          className: "header-item"
         }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
           href: element.destination,
           target: get_target(element.tooltip)
@@ -299,7 +303,9 @@ function (_React$Component) {
           width: _environment__WEBPACK_IMPORTED_MODULE_3__["default"].navbar_image_width
         })));
       });
-      var search_bar = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+      var search_bar = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "search-container"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         id: "search-bar-input",
         type: "text"
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
@@ -307,7 +313,27 @@ function (_React$Component) {
         width: "30px",
         height: "30px"
       }));
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, contents, search_bar);
+      var list_items = _environment__WEBPACK_IMPORTED_MODULE_3__["default"].projects.map(function (element, index) {
+        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          key: index,
+          className: "list-item",
+          target: "_blank"
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+          className: element.symbol_source
+        }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("b", null, element.title), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", null, element.description), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+          src: _environment__WEBPACK_IMPORTED_MODULE_3__["default"].new_tab_symbol_source,
+          title: element.tooltip,
+          height: _environment__WEBPACK_IMPORTED_MODULE_3__["default"].navbar_image_height,
+          width: _environment__WEBPACK_IMPORTED_MODULE_3__["default"].navbar_image_width,
+          href: element.destination,
+          target: "_blank"
+        }));
+      });
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "header-container"
+      }, header), search_bar, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "list-container"
+      }, list_items));
     }
   }]);
 

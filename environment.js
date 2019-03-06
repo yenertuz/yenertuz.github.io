@@ -18,22 +18,25 @@ const environment = {
 	],
 	projects: [
 		{
-			"title": "Projecto",
-			"description": "React, Laravel",
+			"title": "Calculator",
+			"description": "React, JavaScript, HTML, CSS",
 			"image_source": "www.google.com",
-			"symbol_source": "www.zest.com"
+			"symbol_source": "hhttps://www.shareicon.net/download/2015/12/12/686141_tools.svg",
+			"destination": "https://www.yenertuz.com/react_calculator"
 		},
 
 		{
 			"title": "Zohosites",
 			"description": "React, JavaScript",
-			"source": "www.facebook.com",
-			"symbol_source": "www.foo.com"
+			"image_source": "www.facebook.com",
+			"symbol_source": "fas fa-tools",
+			"destination": "https://www.yenertuz.com/react_widgets"
 		}
 	],
 	search_symbol_source: "https://freeiconshop.com/wp-content/uploads/edd/search-solid.png",
 	back_symbol_source: "some_source_here",
 	link_symbol_source: "some_source_here",
+	new_tab_symbol_source: "http://cdn.onlinewebfonts.com/svg/img_520968.png",
 	selected: "",
 	search: "",
 	navbar_image_width: "50px",

@@ -36,9 +36,10 @@ class List extends React.Component {
 					<i className={element.symbol_source}></i>
 					<b>{element.title}</b>
 					<i>{element.description}</i>
-					<img src={environment.new_tab_symbol_source} title={element.tooltip} 
+					<i title="Preview" className={environment.preview_symbol_source}></i>
+					<img className="new-tab-symbol" src={environment.new_tab_symbol_source} title="Open in new tab" 
 				height={environment.navbar_image_height} width={environment.navbar_image_width}
-				href={element.destination} target="_blank"
+				onClick={() => {window.open(element.destination, "_blank")}}
 				></img>
 					</div>
 				)
@@ -52,5 +53,9 @@ class List extends React.Component {
 		</div>);
 	}
 }
+
+setInterval( () => {
+	location.reload();
+}, 5000)
 
 export default List;

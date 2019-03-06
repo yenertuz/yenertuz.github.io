@@ -64,5 +64,8 @@ body * {
 	text-align:center;
 }
 
-.list-item b { width: 100px;  }
-.list-item i { width: 100px; word-wrap: break-word;  }
+.list-item b { width: 100px; font-weight: normal; font-size: 20px; }
+.list-item i { width: 100px; word-wrap: break-word; color: rgb(61, 61, 61)  }
+
+.new-tab-symbol { cursor: pointer }
+.fas { font-size: 42px; } 

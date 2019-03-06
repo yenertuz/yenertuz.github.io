@@ -21,12 +21,12 @@ const environment = {
 			"title": "Calculator",
 			"description": "React, JavaScript, HTML, CSS",
 			"image_source": "www.google.com",
-			"symbol_source": "hhttps://www.shareicon.net/download/2015/12/12/686141_tools.svg",
+			"symbol_source": "fas fa-calculator",
 			"destination": "https://www.yenertuz.com/react_calculator"
 		},
 
 		{
-			"title": "Zohosites",
+			"title": "Widgets",
 			"description": "React, JavaScript",
 			"image_source": "www.facebook.com",
 			"symbol_source": "fas fa-tools",
@@ -37,6 +37,7 @@ const environment = {
 	back_symbol_source: "some_source_here",
 	link_symbol_source: "some_source_here",
 	new_tab_symbol_source: "http://cdn.onlinewebfonts.com/svg/img_520968.png",
+	preview_symbol_source: "fas fa-eye",
 	selected: "",
 	search: "",
 	navbar_image_width: "50px",

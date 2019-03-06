@@ -185,10 +185,10 @@ var environment = {
     "title": "Calculator",
     "description": "React, JavaScript, HTML, CSS",
     "image_source": "www.google.com",
-    "symbol_source": "hhttps://www.shareicon.net/download/2015/12/12/686141_tools.svg",
+    "symbol_source": "fas fa-calculator",
     "destination": "https://www.yenertuz.com/react_calculator"
   }, {
-    "title": "Zohosites",
+    "title": "Widgets",
     "description": "React, JavaScript",
     "image_source": "www.facebook.com",
     "symbol_source": "fas fa-tools",
@@ -198,6 +198,7 @@ var environment = {
   back_symbol_source: "some_source_here",
   link_symbol_source: "some_source_here",
   new_tab_symbol_source: "http://cdn.onlinewebfonts.com/svg/img_520968.png",
+  preview_symbol_source: "fas fa-eye",
   selected: "",
   search: "",
   navbar_image_width: "50px",
@@ -320,13 +321,18 @@ function (_React$Component) {
           target: "_blank"
         }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
           className: element.symbol_source
-        }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("b", null, element.title), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", null, element.description), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("b", null, element.title), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", null, element.description), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+          title: "Preview",
+          className: _environment__WEBPACK_IMPORTED_MODULE_3__["default"].preview_symbol_source
+        }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+          className: "new-tab-symbol",
           src: _environment__WEBPACK_IMPORTED_MODULE_3__["default"].new_tab_symbol_source,
-          title: element.tooltip,
+          title: "Open in new tab",
           height: _environment__WEBPACK_IMPORTED_MODULE_3__["default"].navbar_image_height,
           width: _environment__WEBPACK_IMPORTED_MODULE_3__["default"].navbar_image_width,
-          href: element.destination,
-          target: "_blank"
+          onClick: function onClick() {
+            window.open(element.destination, "_blank");
+          }
         }));
       });
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -340,6 +346,9 @@ function (_React$Component) {
   return List;
 }(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
 
+setInterval(function () {
+  location.reload();
+}, 5000);
 /* harmony default export */ __webpack_exports__["default"] = (List);
 
 /***/ }),

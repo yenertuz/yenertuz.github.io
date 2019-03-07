@@ -14,9 +14,6 @@ function sort_projects(array, search_string) {
 		var new1 = string1.substring(0, len1).toLowerCase();
 		var new2 = string2.substring(0, len1).toLowerCase();
 	
-		// console.log(new1);
-		// console.log(new2);
-	
 		if (new1 == new2) {
 			return true;
 		}
@@ -29,14 +26,12 @@ function sort_projects(array, search_string) {
 		}
 
 		var array_of_values = comma_separated.split(", ");
-		array_of_values.forEach(
-			(element2) => {
-				console.log(element2);
-				if (is_match(element2)) {
-					return true;
-				}
+		var array_len = array_of_values.length;
+		for (var i = 0; i < array_len; i++) {
+			if (is_match(array_of_values[i]) == true) {
+				return true;
 			}
-		);
+		}
 		return false;
 	}
 
@@ -53,7 +48,7 @@ function sort_projects(array, search_string) {
 	for (var i = 0; i < array_len; i++) {
 		if (new_array.includes(array[i]) == false && 
 			search_commas(array[i].description) == true ) {
-				new_array.push(element);
+				new_array.push(array[i]);
 			}
 	}
 

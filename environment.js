@@ -27,7 +27,7 @@ const environment = {
 
 		{
 			"title": "Widgets",
-			"description": "React, JavaScript",
+			"description": "React, JavaScript, HTML, CSS",
 			"image_source": "https://github.com/yenertuz/react_widgets/raw/master/demo.gif?raw=true",
 			"symbol_source": "fas fa-tools",
 			"destination": "https://www.yenertuz.com/react_widgets"

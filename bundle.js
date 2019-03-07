@@ -196,7 +196,7 @@ var environment = {
     "destination": "https://www.yenertuz.com/react_calculator"
   }, {
     "title": "Widgets",
-    "description": "React, JavaScript",
+    "description": "React, JavaScript, HTML, CSS",
     "image_source": "https://github.com/yenertuz/react_widgets/raw/master/demo.gif?raw=true",
     "symbol_source": "fas fa-tools",
     "destination": "https://www.yenertuz.com/react_widgets"
@@ -503,8 +503,7 @@ function sort_projects(array, search_string) {
     }
 
     var new1 = string1.substring(0, len1).toLowerCase();
-    var new2 = string2.substring(0, len1).toLowerCase(); // console.log(new1);
-    // console.log(new2);
+    var new2 = string2.substring(0, len1).toLowerCase();
 
     if (new1 == new2) {
       return true;
@@ -521,13 +520,14 @@ function sort_projects(array, search_string) {
     }
 
     var array_of_values = comma_separated.split(", ");
-    array_of_values.forEach(function (element2) {
-      console.log(element2);
+    var array_len = array_of_values.length;
 
-      if (is_match(element2)) {
+    for (var i = 0; i < array_len; i++) {
+      if (is_match(array_of_values[i]) == true) {
         return true;
       }
-    });
+    }
+
     return false;
   }
 
@@ -540,7 +540,7 @@ function sort_projects(array, search_string) {
 
   for (var i = 0; i < array_len; i++) {
     if (new_array.includes(array[i]) == false && search_commas(array[i].description) == true) {
-      new_array.push(element);
+      new_array.push(array[i]);
     }
   } // array.forEach(
   // 	(element) => {

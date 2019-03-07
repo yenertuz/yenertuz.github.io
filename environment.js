@@ -35,7 +35,7 @@ const environment = {
 	],
 	search_symbol_source: "https://freeiconshop.com/wp-content/uploads/edd/search-solid.png",
 	back_symbol_source: "fas fa-arrow-left",
-	new_tab_symbol_source: "http://cdn.onlinewebfonts.com/svg/img_520968.png",
+	new_tab_symbol_source: "https://cdn.onlinewebfonts.com/svg/img_520968.png",
 	preview_symbol_source: "fas fa-eye",
 	selected: "",
 	search: "",

@@ -1,6 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import $ from 'jQuery';
 import environment from "./environment";
 import List from "./frontend/list";
 import Detail from "./frontend/detail";

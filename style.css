@@ -1,16 +1,13 @@
 body * {
-	margin-top: 20px;
-	margin-bottom: 20px;
 	display:block;
 	font-family: sans-serif;
 }
 
-#root {
-	display: grid;
-	grid-template-areas:
-	'header'
-	'search'
-	'main';
+body { margin: 0px }
+
+#main {
+	display: flex;
+	flex-direction: column;
 	grid-gap: 5px;
 }
 
@@ -26,6 +23,8 @@ body * {
 	display: flex;
 	justify-content: space-around;
 	border-bottom: 1px solid black;
+	padding-bottom: 5px;
+	padding-top: 5px;
 }
 
 .search-container {
@@ -33,6 +32,8 @@ body * {
 	justify-content: center;
 	border-bottom: 1px solid black;
 	vertical-align: middle;
+	padding-top: 5px;
+	padding-bottom: 5px;
 }
 
 .search-container input {
@@ -50,6 +51,7 @@ body * {
 .list-container {
 	display: flex; 
 	flex-direction: column;
+	padding-top: 5px;
 }
 
 .list-item {
@@ -64,8 +66,16 @@ body * {
 	text-align:center;
 }
 
+.list-item img { padding-right: 5px } 
+
+.content-gif { height: auto; }
+
 .list-item b { width: 100px; font-weight: normal; font-size: 20px; }
 .list-item i { width: 100px; word-wrap: break-word; color: rgb(61, 61, 61)  }
 
 .new-tab-symbol { cursor: pointer }
-.fas { font-size: 42px; } 
+.fas { font-size: 42px; }
+
+.header-container span { margin-top: auto; margin-bottom: auto; }
+
+.selected-tab { color: goldenrod;   }

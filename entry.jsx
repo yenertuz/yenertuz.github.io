@@ -6,6 +6,16 @@ import List from "./frontend/list";
 import Detail from "./frontend/detail";
 
 class Root extends React.Component {
+
+	constructor(props) {
+		super(props);
+
+		let this_component = this;
+		environment.refresh = () => {
+			this_component.setState({});
+		};
+	}
+
 	render() {
 		if (environment.selected == "")
 			return (<List />);

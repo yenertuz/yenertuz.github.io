@@ -20,7 +20,7 @@ const environment = {
 		{
 			"title": "Calculator",
 			"description": "React, JavaScript, HTML, CSS",
-			"image_source": "www.google.com",
+			"image_source": "https://github.com/yenertuz/react_calculator/raw/master/react_calculator_screenshot.gif?raw=true",
 			"symbol_source": "fas fa-calculator",
 			"destination": "https://www.yenertuz.com/react_calculator"
 		},
@@ -28,14 +28,13 @@ const environment = {
 		{
 			"title": "Widgets",
 			"description": "React, JavaScript",
-			"image_source": "www.facebook.com",
+			"image_source": "https://github.com/yenertuz/react_widgets/raw/master/demo.gif?raw=true",
 			"symbol_source": "fas fa-tools",
 			"destination": "https://www.yenertuz.com/react_widgets"
 		}
 	],
 	search_symbol_source: "https://freeiconshop.com/wp-content/uploads/edd/search-solid.png",
-	back_symbol_source: "some_source_here",
-	link_symbol_source: "some_source_here",
+	back_symbol_source: "fas fa-arrow-left",
 	new_tab_symbol_source: "http://cdn.onlinewebfonts.com/svg/img_520968.png",
 	preview_symbol_source: "fas fa-eye",
 	selected: "",

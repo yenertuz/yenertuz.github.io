@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import $ from 'jQuery';
 import environment from "../environment";
+import sort_projects from "./sort_projects";
 
 class List extends React.Component {
 	render() {
@@ -11,6 +12,12 @@ class List extends React.Component {
 			else
 				return ("_blank");
 		};
+
+		var handle_preview = (event, element) => {
+			environment.selected = element;
+			event.preventDefault();
+			environment.refresh();
+		}
 
 		var header = environment.header.map(
 			(element, index) => {
@@ -25,18 +32,27 @@ class List extends React.Component {
 		)
 
 		var search_bar = <div className="search-container">
-			<input id="search-bar-input" type="text"></input>
+			<input id="search-bar-input" type="text"
+			onChange={ (e) => {
+				e.preventDefault();
+				environment.search = e.currentTarget.value;
+				environment.refresh();
+			} }
+			></input>
 			<img src={environment.search_symbol_source} width="30px" height="30px"></img>
 		</div>;
 
-		var list_items = environment.projects.map(
+		var ordered_projects = sort_projects(environment.projects, environment.search)
+
+		var list_items = ordered_projects.map(
 			(element, index) => {
 				return (
 					<div key={index} className="list-item" target="_blank">
 					<i className={element.symbol_source}></i>
 					<b>{element.title}</b>
 					<i>{element.description}</i>
-					<i title="Preview" className={environment.preview_symbol_source}></i>
+					<i title="Preview" className={environment.preview_symbol_source}
+					onClick={(e) => { handle_preview(e, element); }}></i>
 					<img className="new-tab-symbol" src={environment.new_tab_symbol_source} title="Open in new tab" 
 				height={environment.navbar_image_height} width={environment.navbar_image_width}
 				onClick={() => {window.open(element.destination, "_blank")}}
@@ -46,16 +62,12 @@ class List extends React.Component {
 			}
 		)
 
-		return (<div>
+		return (<div id="main">
 			<div className="header-container">{header}</div>
 			{search_bar}
 			<div className="list-container">{list_items}</div>
 		</div>);
 	}
 }
-
-setInterval( () => {
-	location.reload();
-}, 5000)
 
 export default List;

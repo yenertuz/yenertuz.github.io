@@ -329,7 +329,9 @@ function (_React$Component) {
       }));
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         id: "main"
-      }, header_container, content);
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "sticky"
+      }, header_container), content);
     }
   }]);
 
@@ -459,8 +461,10 @@ function (_React$Component) {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         id: "main"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "sticky"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "header-container"
-      }, header), search_bar, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, header), search_bar), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "list-container"
       }, list_items));
     }

@@ -62,8 +62,8 @@ class List extends React.Component {
 		)
 
 		return (<div id="main">
-			<div className="header-container">{header}</div>
-			{search_bar}
+			<div className="sticky"><div className="header-container">{header}</div>
+			{search_bar}</div>
 			<div className="list-container">{list_items}</div>
 		</div>);
 	}

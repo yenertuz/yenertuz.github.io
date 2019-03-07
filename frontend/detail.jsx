@@ -55,7 +55,7 @@ class Detail extends React.Component {
 		
 		return (
 			<div id="main">
-				{header_container}
+				<div className="sticky">{header_container}</div>
 				{content}
 			</div>
 		);

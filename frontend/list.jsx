@@ -31,7 +31,7 @@ class List extends React.Component {
 		)
 
 		var search_bar = <div className="search-container">
-			<input id="search-bar-input" type="text"
+			<input id="search-bar-input" type="text" placeholder="Search titles or keywords"
 			onChange={ (e) => {
 				e.preventDefault();
 				environment.search = e.currentTarget.value;

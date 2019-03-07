@@ -423,6 +423,7 @@ function (_React$Component) {
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         id: "search-bar-input",
         type: "text",
+        placeholder: "Search titles or keywords",
         onChange: function onChange(e) {
           e.preventDefault();
           _environment__WEBPACK_IMPORTED_MODULE_2__["default"].search = e.currentTarget.value;

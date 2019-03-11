@@ -39,15 +39,15 @@ class Detail extends React.Component {
 		}
 
 		var header_container = <div className="header-container">
-		<i className={environment.back_symbol_source}
+		<i className={environment.back_symbol_source + " clickable"}
 		onClick = { () => { environment.selected = ""; 
 		environment.tab = 0;
 		environment.search = ""; 
 		environment.refresh(); } } 
 		></i>
 		<span>{environment.selected.title}</span>
-		<i className={video_class} onClick={switch_tabs}></i>
-		<i className={pointer_class} onClick={switch_tabs}></i>
+		<i className={video_class + " clickable"} onClick={switch_tabs}></i>
+		<i className={pointer_class + " clickable"} onClick={switch_tabs}></i>
 		<img src={environment.new_tab_symbol_source}
 		height={environment.navbar_image_height}
 		width={environment.navbar_image_width} />

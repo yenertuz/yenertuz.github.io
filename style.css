@@ -81,3 +81,4 @@ body { margin: 0px }
 .selected-tab { color: goldenrod;   }
 
 .sticky { position: sticky; top: 0; background-color:white; }
+.clickable { cursor: pointer; }

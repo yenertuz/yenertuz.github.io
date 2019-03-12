@@ -60,6 +60,8 @@ body { margin: 0px }
 	vertical-align: middle;
 }
 
+.list-item + .list-item {  margin-top: 8px;     }
+
 .list-item b, .list-item i {
 	margin-top: auto;
 	margin-bottom: auto;

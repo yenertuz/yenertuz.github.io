@@ -40,7 +40,8 @@ const environment = {
 	selected: "",
 	search: "",
 	navbar_image_width: "50px",
-	navbar_image_height: "50px"
+	navbar_image_height: "50px",
+	tab: 0
 };
 
 export default environment;

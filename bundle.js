@@ -208,7 +208,8 @@ var environment = {
   selected: "",
   search: "",
   navbar_image_width: "50px",
-  navbar_image_height: "50px"
+  navbar_image_height: "50px",
+  tab: 0
 };
 /* harmony default export */ __webpack_exports__["default"] = (environment);
 
@@ -296,20 +297,21 @@ function (_React$Component) {
         });
       }
 
-      var switch_tabs = function switch_tabs() {
-        if (_environment__WEBPACK_IMPORTED_MODULE_2__["default"].tab == 1) {
-          _environment__WEBPACK_IMPORTED_MODULE_2__["default"].tab = 0;
-        } else {
-          _environment__WEBPACK_IMPORTED_MODULE_2__["default"].tab = 1;
+      function switch_tabs(n, e) {
+        e.preventDefault();
+
+        if (_environment__WEBPACK_IMPORTED_MODULE_2__["default"].tab == n) {
+          return;
         }
 
+        _environment__WEBPACK_IMPORTED_MODULE_2__["default"].tab = n;
         _environment__WEBPACK_IMPORTED_MODULE_2__["default"].refresh();
-      };
+      }
 
       var header_container = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "header-container"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-        className: _environment__WEBPACK_IMPORTED_MODULE_2__["default"].back_symbol_source,
+        className: _environment__WEBPACK_IMPORTED_MODULE_2__["default"].back_symbol_source + " clickable",
         onClick: function onClick() {
           _environment__WEBPACK_IMPORTED_MODULE_2__["default"].selected = "";
           _environment__WEBPACK_IMPORTED_MODULE_2__["default"].tab = 0;
@@ -317,15 +319,20 @@ function (_React$Component) {
           _environment__WEBPACK_IMPORTED_MODULE_2__["default"].refresh();
         }
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, _environment__WEBPACK_IMPORTED_MODULE_2__["default"].selected.title), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-        className: video_class,
-        onClick: switch_tabs
+        className: video_class + " clickable",
+        onClick: function onClick(e) {
+          switch_tabs(0, e);
+        }
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-        className: pointer_class,
-        onClick: switch_tabs
+        className: pointer_class + " clickable",
+        onClick: function onClick(e) {
+          switch_tabs(1, e);
+        }
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
         src: _environment__WEBPACK_IMPORTED_MODULE_2__["default"].new_tab_symbol_source,
         height: _environment__WEBPACK_IMPORTED_MODULE_2__["default"].navbar_image_height,
-        width: _environment__WEBPACK_IMPORTED_MODULE_2__["default"].navbar_image_width
+        width: _environment__WEBPACK_IMPORTED_MODULE_2__["default"].navbar_image_width,
+        className: "clickable"
       }));
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         id: "main"
@@ -444,7 +451,7 @@ function (_React$Component) {
           className: element.symbol_source
         }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("b", null, element.title), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", null, element.description), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
           title: "Preview",
-          className: _environment__WEBPACK_IMPORTED_MODULE_2__["default"].preview_symbol_source,
+          className: _environment__WEBPACK_IMPORTED_MODULE_2__["default"].preview_symbol_source + " clickable",
           onClick: function onClick(e) {
             handle_preview(e, element);
           }

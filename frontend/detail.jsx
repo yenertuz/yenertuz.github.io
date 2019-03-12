@@ -28,13 +28,12 @@ class Detail extends React.Component {
 			content = <img className="content-gif" src={environment.selected.image_source} width="100%" height="500px"></img>;
 		}
 	
-		var switch_tabs = () => {
-			if (environment.tab == 1) {
-				environment.tab = 0;
+		function switch_tabs(n, e) {
+			e.preventDefault();
+			if (environment.tab == n) {
+				return ;
 			}
-			else {
-				environment.tab = 1;
-			}
+			environment.tab = n;
 			environment.refresh();
 		}
 
@@ -46,11 +45,11 @@ class Detail extends React.Component {
 		environment.refresh(); } } 
 		></i>
 		<span>{environment.selected.title}</span>
-		<i className={video_class + " clickable"} onClick={switch_tabs}></i>
-		<i className={pointer_class + " clickable"} onClick={switch_tabs}></i>
+		<i className={video_class + " clickable"} onClick={(e) => { switch_tabs(0, e); }}></i>
+		<i className={pointer_class + " clickable"} onClick={(e) => { switch_tabs(1, e); }} ></i>
 		<img src={environment.new_tab_symbol_source}
 		height={environment.navbar_image_height}
-		width={environment.navbar_image_width} />
+		width={environment.navbar_image_width} className="clickable"/>
 		</div>
 		
 		return (

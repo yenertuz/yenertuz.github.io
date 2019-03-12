@@ -47,9 +47,7 @@ class Detail extends React.Component {
 		<span>{environment.selected.title}</span>
 		<i className={video_class + " clickable"} onClick={(e) => { switch_tabs(0, e); }}></i>
 		<i className={pointer_class + " clickable"} onClick={(e) => { switch_tabs(1, e); }} ></i>
-		<img src={environment.new_tab_symbol_source}
-		height={environment.navbar_image_height}
-		width={environment.navbar_image_width} className="clickable"/>
+		<i className={environment.new_tab_symbol_source + " clickable"}/>
 		</div>
 		
 		return (

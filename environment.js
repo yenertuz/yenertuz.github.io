@@ -19,7 +19,7 @@ const environment = {
 	projects: [
 		{
 			"title": "Calculator",
-			"description": "React, JavaScript, HTML, CSS",
+			"description": "React",
 			"image_source": "https://github.com/yenertuz/react_calculator/raw/master/react_calculator_screenshot.gif?raw=true",
 			"symbol_source": "fas fa-calculator",
 			"destination": "https://www.yenertuz.com/react_calculator"
@@ -27,7 +27,7 @@ const environment = {
 
 		{
 			"title": "Widgets",
-			"description": "React, JavaScript, HTML, CSS",
+			"description": "React, JavaScript",
 			"image_source": "https://github.com/yenertuz/react_widgets/raw/master/demo.gif?raw=true",
 			"symbol_source": "fas fa-tools",
 			"destination": "https://www.yenertuz.com/react_widgets"
@@ -35,7 +35,7 @@ const environment = {
 	],
 	search_symbol_source: "https://freeiconshop.com/wp-content/uploads/edd/search-solid.png",
 	back_symbol_source: "fas fa-arrow-left",
-	new_tab_symbol_source: "https://cdn.onlinewebfonts.com/svg/img_520968.png",
+	new_tab_symbol_source: "fas fa-external-link-alt",
 	preview_symbol_source: "fas fa-eye",
 	selected: "",
 	search: "",

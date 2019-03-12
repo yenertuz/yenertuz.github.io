@@ -52,10 +52,9 @@ class List extends React.Component {
 					<i>{element.description}</i>
 					<i title="Preview" className={environment.preview_symbol_source + " clickable"}
 					onClick={(e) => { handle_preview(e, element); }}></i>
-					<img className="new-tab-symbol" src={environment.new_tab_symbol_source} title="Open in new tab" 
-				height={environment.navbar_image_height} width={environment.navbar_image_width}
+					<i className={environment.new_tab_symbol_source + " clickable"}
 				onClick={() => {window.open(element.destination, "_blank")}}
-				></img>
+				></i>
 					</div>
 				)
 			}

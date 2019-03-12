@@ -190,20 +190,20 @@ var environment = {
   }],
   projects: [{
     "title": "Calculator",
-    "description": "React, JavaScript, HTML, CSS",
+    "description": "React",
     "image_source": "https://github.com/yenertuz/react_calculator/raw/master/react_calculator_screenshot.gif?raw=true",
     "symbol_source": "fas fa-calculator",
     "destination": "https://www.yenertuz.com/react_calculator"
   }, {
     "title": "Widgets",
-    "description": "React, JavaScript, HTML, CSS",
+    "description": "React, JavaScript",
     "image_source": "https://github.com/yenertuz/react_widgets/raw/master/demo.gif?raw=true",
     "symbol_source": "fas fa-tools",
     "destination": "https://www.yenertuz.com/react_widgets"
   }],
   search_symbol_source: "https://freeiconshop.com/wp-content/uploads/edd/search-solid.png",
   back_symbol_source: "fas fa-arrow-left",
-  new_tab_symbol_source: "https://cdn.onlinewebfonts.com/svg/img_520968.png",
+  new_tab_symbol_source: "fas fa-external-link-alt",
   preview_symbol_source: "fas fa-eye",
   selected: "",
   search: "",
@@ -328,11 +328,8 @@ function (_React$Component) {
         onClick: function onClick(e) {
           switch_tabs(1, e);
         }
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-        src: _environment__WEBPACK_IMPORTED_MODULE_2__["default"].new_tab_symbol_source,
-        height: _environment__WEBPACK_IMPORTED_MODULE_2__["default"].navbar_image_height,
-        width: _environment__WEBPACK_IMPORTED_MODULE_2__["default"].navbar_image_width,
-        className: "clickable"
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+        className: _environment__WEBPACK_IMPORTED_MODULE_2__["default"].new_tab_symbol_source + " clickable"
       }));
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         id: "main"
@@ -455,12 +452,8 @@ function (_React$Component) {
           onClick: function onClick(e) {
             handle_preview(e, element);
           }
-        }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-          className: "new-tab-symbol",
-          src: _environment__WEBPACK_IMPORTED_MODULE_2__["default"].new_tab_symbol_source,
-          title: "Open in new tab",
-          height: _environment__WEBPACK_IMPORTED_MODULE_2__["default"].navbar_image_height,
-          width: _environment__WEBPACK_IMPORTED_MODULE_2__["default"].navbar_image_width,
+        }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+          className: _environment__WEBPACK_IMPORTED_MODULE_2__["default"].new_tab_symbol_source + " clickable",
           onClick: function onClick() {
             window.open(element.destination, "_blank");
           }

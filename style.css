@@ -76,7 +76,7 @@ body { margin: 0px }
 .list-item i { width: 100px; word-wrap: break-word; color: rgb(61, 61, 61)  }
 
 .new-tab-symbol { cursor: pointer }
-.fas { font-size: 42px; }
+.fas { font-size: 42px; } .far { font-size: 42px }
 
 .header-container span { margin-top: auto; margin-bottom: auto; }
 

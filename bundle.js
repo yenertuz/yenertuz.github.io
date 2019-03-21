@@ -200,6 +200,12 @@ var environment = {
     "image_source": "https://github.com/yenertuz/react_widgets/raw/master/demo.gif?raw=true",
     "symbol_source": "fas fa-tools",
     "destination": "https://www.yenertuz.com/react_widgets"
+  }, {
+    "title": "Truth or Dare",
+    "description": "React, PHP, SQL, JavaScript",
+    "image_source": "",
+    "symbol_source": "far fa-grin-beam-sweat",
+    "destination": "https://www.yenertuz.com/truth_or_dare"
   }],
   search_symbol_source: "https://freeiconshop.com/wp-content/uploads/edd/search-solid.png",
   back_symbol_source: "fas fa-arrow-left",

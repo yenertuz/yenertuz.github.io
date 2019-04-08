@@ -38,6 +38,13 @@ const environment = {
 			"image_source": "",
 			"symbol_source": "far fa-grin-beam-sweat",
 			"destination": "https://www.yenertuz.com/truth_or_dare"
+		},
+		{
+			"title": "Raycasting",
+			"description": "JavaScript, Canvas",
+			"image_source": "",
+			"symbol_source": "fas fa-gamepad",
+			"destination": "https://www.yenertuz.com/raycasting"
 		}
 	],
 	search_symbol_source: "https://freeiconshop.com/wp-content/uploads/edd/search-solid.png",
